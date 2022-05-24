@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 void BubbleSort(int A[], int n)
 {
     for (int i = 0; i < n - 1; i++)
@@ -13,6 +12,7 @@ void BubbleSort(int A[], int n)
             if (A[j] > A[j + 1])
                 swap(A[j], A[j + 1]); 
 }
+
 void SelectionSort(int A[], int n)
 {
     int min;
@@ -25,7 +25,9 @@ void SelectionSort(int A[], int n)
         if (min != i)
             swap(A[i], A[min]);
     }
-}void InsertionSort(int A[], int n)
+}
+
+void InsertionSort(int A[], int n)
 {
     int pos, x;
     for (int i = 1; i < n; i++)
@@ -144,10 +146,12 @@ int partition(int A[], int low, int high)
     int m2 = high;
     return m1, m2;
 }
+
 void QuickSort(int A[], int n)
 {
     partition(A, 0, n - 1);
 }
+
 int main()
 {
     int A[50000];
